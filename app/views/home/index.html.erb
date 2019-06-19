@@ -1,0 +1,13 @@
+<% index = -1%>
+<% @items.each do |user| %>
+    <% index += 1 %>
+    <% user.each do |item| %>
+        <%= item.name %>
+        <br>
+        <img src=<%= item.image %>>
+        <br>
+        <%= @users[index].phone_number %> 
+    <% end %>
+<% end %>
+<br>
+<%= link_to 'My Items', items_path %>
