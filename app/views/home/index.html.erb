@@ -1,17 +1,18 @@
 <% index = -1%>
 <% @items.each do |user| %>
-    <% index += 1 %>
-    <% user.each do |item| %>
-        <div class="fuck">
-        <div class="card" style="width: 18rem;">
-  <img src=<%= item.image %> class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-</div>
-<% end %>    
+  <% index += 1 %>
+  <% user.each do |item| %>
+    <% if !item.is_borrowed %>
+      <div class="father">
+        <div class="card" style="width: 18rem;" >
+          <img src=<%= item.image %> class="card-img-top" height="250px" alt="...">
+          <div class="card-bodindexy">
+            <h5 class="card-title"><%= item.name.upcase %></h5>
+            <h5>Owner by <%= @users_details[index].name.upcase %> </h5>
+            <h5 href="#" class="btn btn-primary"> <%= @users_details[index].phone_number %> </h5>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>    
 <% end %>
-<%= link_to 'My Items', items_path %>

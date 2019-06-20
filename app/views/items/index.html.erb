@@ -17,7 +17,7 @@
       <tr>
         <td><%= item.name %></td>
         <td><%= item.is_borrowed %></td>
-        <td><%= item.image %></td>
+        <td><img src=<%= item.image %> width="20px" height="20px"></td>
         <td><%= link_to 'Show', item %></td>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
         <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -29,4 +29,3 @@
 <br>
 
 <%= link_to 'New Item', new_item_path %>
-<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
