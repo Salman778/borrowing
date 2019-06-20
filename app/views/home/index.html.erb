@@ -8,7 +8,7 @@
           <img src=<%= item.image %> class="card-img-top" height="250px" alt="...">
           <div class="card-bodindexy">
             <h5 class="card-title"><%= item.name.upcase %></h5>
-            <h5>Owner by <%= @users_details[index].name.upcase %> </h5>
+            <p>Ownerd: <%= @users_details[index].name.upcase %> </p>
             <h5 href="#" class="btn btn-primary"> <%= @users_details[index].phone_number %> </h5>
           </div>
         </div>
